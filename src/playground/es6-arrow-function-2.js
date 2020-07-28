@@ -1,30 +1,39 @@
-// arguments object - no longer bound with arrow functions
+// Arguments object - no longer bound with arrow functions
+const add = function(a,b ){
+    console.log(arguments);
+  return a + b;
+};
 
-const add = (a, b) => {
+const add2 = (a,b) => {
   // console.log(arguments);
   return a + b;
 };
-console.log(add(55, 1, 1001));
 
-// this keyword - no longer bound
 
+// this keyword - no longer bound.
 const user = {
-  name: 'Andrew',
-  cities: ['Philadelphia', 'New York', 'Dublin'],
-  printPlacesLived() {
-    return this.cities.map((city) => this.name + ' has lived in ' + city);
-  }
+    name : "andrew",
+    cities : ["Oslo", "Trondheim", "Bergen"],
+
+    // Only ES6 - using arrow method no function keyword
+    printPlacesLived () {
+        return this.cities.map((city) => this.name + " has lived in " + city + "!");
+        }
 };
+
+    // Workaround ES6 and ES5
+    // Arrow function goes up to the top parent object, but ES5 only goes one step up (if arrow methods not used (above)
+    // printPlacesLives:  function () {
+    // this.cities.forEach((city) => {
+    // console.log(this.name + " has lived in " + city);
+
+    // Workaround ES5
+    // Arrow function goes up to the top parent object, but ES5 only goes one step up.(if arrow methods not used (above)
+    // printPlacesLives:  function () {
+    //const that = this;
+    //this.cities.forEach(function (city) {
+    //    console.log(that.name + " has lived in " + city);
+    //})
+
+
 console.log(user.printPlacesLived());
-
-// Challenge area
-
-const multiplier = {
-  numbers: [10, 20, 30],
-  multiplyBy: 3,
-  multiply() {
-    return this.numbers.map((number) => number * this.multiplyBy);
-  }
-};
-
-console.log(multiplier.multiply());

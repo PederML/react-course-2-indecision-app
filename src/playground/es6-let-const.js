@@ -1,22 +1,19 @@
-var nameVar = 'Andrew';
-var nameVar = 'Mike';
-console.log('nameVar', nameVar);
+// Const, var, let and Block scoping
 
-let nameLet = 'Jen';
-nameLet = 'Julie';
-console.log('nameLet', nameLet);
+// Can redefine variable, Available in the parent global scope.
+var nameVar = "Andrew";
+var nameVar = "Mike";
+console.log("nameVar", nameVar);
 
-const nameConst = 'Frank';
-console.log('nameConst', nameConst);
 
-// Block scoping
+// Can't redefine a let variable, but can reassign the value. NOT available in the parent global scope - Function scoped
+let nameLet = "Peder";
+nameLet = "Peder Lund";
+console.log("nameLet", nameLet);
 
-const fullName = 'Jen Mead';
-let firstName;
 
-if (fullName) {
-  firstName = fullName.split(' ')[0];
-  console.log(firstName);
-}
+// Can't redefine or reassign a constant. NOT available in the parent global scope - Function scoped
+const nameConst = "Tora";
+console.log("nameConst", nameConst);
 
-console.log(firstName);
+

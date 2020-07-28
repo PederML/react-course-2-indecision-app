@@ -1,27 +1,32 @@
-// function square(x) {
-//   return x * x;
-// };
-
-// console.log(square(3));
-
-// // const squareArrow = (x) => {
-// //   return x * x;
-// // };
-
-// const squareArrow = (x) => x * x;
-
-// console.log(squareArrow(4));
+//Normal function - ES5
+const square = function (x) {
+  return x*x ;
+};
+console.log(square(9));
 
 
-// Challenge - Use arrow functions
-// getFirstName('Mike Smith') -> "Mike"
-// Create regular arrow function
-// Create arrow function using shorthand syntax
+// Arrow function syntax - traditional return statement
+const squareArrow = (x) => {
+  return x* x;
+};
+console.log(squareArrow(8));
 
-// const getFirstName = (fullName) => {
-//   return fullName.split(' ')[0];
-// };
 
-const getFirstName = (fullName) => fullName.split(' ')[0];
+// Arrow function syntax - short return statement
+const squareArrow2 = (x) => x*x;
+console.log(squareArrow2(8));
 
-console.log(getFirstName('Andrew Mead'));
+// Challenge
+// Traditional function
+const getFirstName = function (fullName) {
+  return fullName.split(" ")[0];
+};
+console.log(getFirstName("Peder Lund"));
+
+// Arrow function
+const getFirstName2 = (fullName) => fullName.split(" ")[0];
+console.log(getFirstName2("Peder Lund"));
+
+
+
+
