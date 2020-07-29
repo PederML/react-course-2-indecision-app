@@ -1,0 +1,26 @@
+/**********************************************
+*** GENERAL
+**********************************************/
+.title{
+    color: #23778b;
+    font-size: 30px;
+}
+
+button {
+    color: black;
+    height: 10px;
+    width: 100px;
+    padding: 10px;
+    border: 10px;
+    background-color: darkslategrey;
+}
+
+h1{
+    color: #ff43bb;
+}
+
+
+p{
+    color: #0d4c4f;
+}
+

@@ -43,7 +43,7 @@ const appRoot = document.getElementById("app");
 const render = ()=> {
     const template = (
         <div>
-            <h1>Title: {app.title}</h1>
+            <h1 class='title'> Title: {app.title}</h1>
             {app.subtitle && <p> Subtitle: {app.subtitle} </p>}
             <p> {app.options.length > 0 ? ("Here are your options:"): "No options"} </p>
             <button onClick={onRemoveAll}>Remove all options</button>
